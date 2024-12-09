@@ -14,7 +14,7 @@ Description: This project incorporates...
   
 Project Targets: Semester 2
 - Include a GPS sensor to track the Robocars' location at all times, potentially including a push button for emergency situations that would trigger an alert.
-- Use speed sensors to monitor the speed of each respective wheel to ensure each wheel stays at the same speed to avoid slip and slide, thus helping combat hazardous driving conditions.
+- Use speed sensors to monitor the speed of each respective wheel to ensure each wheel stays at the same speed to avoid RoboCar slip and slide, thus helping combat hazardous driving conditions.
 - Bluetooth functionality to control motor direction.
 - Further improve the website to make it as readable and accessible as possible for the user.
   
