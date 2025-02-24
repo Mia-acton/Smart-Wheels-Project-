@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Sign up</title>
+    <link rel="icon" href="Pictures/Wheel.jpg">
+    <link rel="stylesheet" href="authentication.css">
+</head>
+
+<body>
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#control-panel">Control Panel</a>
+        <a href="#contact">Contact Us</a>
+    </div>
+    
+     <table class="center">
+        <br>
+        <br>
+        <br>
+        <tr>
+        </tr>
+        <tr>
+             <td class="leftTable">
+               <label for="fname">First Name</label>
+             </td>
+             <td>
+                 <input type="text" id="fname" name="fname" style="font-size: large;">
+            </td>
+         </tr>
+
+         <tr>
+            <td class="leftTable">
+                <label for="lname">Last name</label>
+            </td>
+            <td>
+                 <input type="text" id="lname" name="lname" style="font-size: large;">
+            </td>
+        </tr>
+
+        <tr>
+            <td class="leftTable">
+               <label for="subj">Car Brand</label>
+           </td>
+           <td class="rightTable">
+               <input type="checkbox" id="brand1" name="brand1" value="BMW">
+               <label for="brand1">BMW</label><br>
+               <input type="checkbox" id="brand2" name="brand2" value="Volvo">
+               <label for="brand2">Volvo</label><br>
+               <input type="checkbox" id="brand3" name="brand3" value="Audi">
+               <label for="brand3">Audi</label><br>
+               <input type="checkbox" id="brand4" name="brand4" value="Tesla">
+               <label for="brand4">Tesla</label><br>
+               <input type="checkbox" id="brand5" name="brand5" value="Hyundai">
+               <label for="brand5">Hyundai</label><br>
+          </td>
+        </tr>
+
+        <tr>
+            <td class="leftTable">
+                <label for="reg">Registration</label>
+            </td>
+            <td>
+                 <input type="registration" id="reg" name="reg" style="font-size: large;">
+            </td>
+        </tr>
+
+        <tr>
+            <td class="leftTable">
+                <label for="phone">Phone Number</label>
+            </td>
+            <td>
+                 <input type="tel" id="phone" name="phone" style="font-size: large;">
+            </td>
+        </tr>
+
+        
+        <tr>
+            <td class="leftTable">
+                <label for="email">Email Address</label>
+            </td>
+            <td>
+                 <input type="email" id="email" name="email" style="font-size: large;">
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <button class="button" onclick="thankYou()">Sign In</button>
+             </td>
+        </tr>
+       </table>
+<script src="authentication.js"></script>
+
+</body>
+</html>
