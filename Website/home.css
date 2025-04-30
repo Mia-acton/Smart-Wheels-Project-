@@ -48,11 +48,6 @@
     border-bottom: 2px solid orange;
   }
   
-  .search-icon {
-    font-size: 1.2rem;
-    cursor: pointer;
-  }
-  
   /* HERO SECTION */
   .hero {
     position: relative;

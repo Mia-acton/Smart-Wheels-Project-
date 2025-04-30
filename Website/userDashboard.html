@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>User Dashboard | Smart Wheels</title>
+        <link rel="stylesheet" href="theme.css">
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+      </head>
+      
+<body>
+  <div class="dashboard-wrapper">
+    <header>
+      <h1 id="welcome-msg">Welcome!</h1>
+      <p class="subheading">Here’s your Smart Robocar live data overview</p>
+    </header>
+
+    <section class="data-section">
+      <div class="data-card">
+        <h3>Alcohol Sensor</h3>
+        <p id="alcohol-status">Loading...</p>
+      </div>
+      <div class="data-card">
+        <h3>Fire Sensor</h3>
+        <p id="fire-status">Loading...</p>
+      </div>
+      <div class="data-card">
+        <h3>Gas Sensor</h3>
+        <p id="gas-status">Loading...</p>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const user = urlParams.get('user') || 'User';
+    document.getElementById('welcome-msg').textContent = `Welcome, ${user}!`;
+
+    // Optional: Fetch ThingSpeak data
+    const channelID = '2786014';
+    const readAPIKey = 'XUQSKOS9OTM640E3';
+
+    async function fetchSensorData() {
+      const url = `https://api.thingspeak.com/channels/${channelID}/feeds.json?api_key=${readAPIKey}&results=1`;
+
+      try {
+        const response = await fetch(url);
+        const data = await response.json();
+        const latest = data.feeds[0];
+        document.getElementById('alcohol-status').textContent = latest.field1 || 'No Data';
+        document.getElementById('fire-status').textContent = latest.field2 || 'No Data';
+        document.getElementById('gas-status').textContent = latest.field3 || 'No Data';
+      } catch (err) {
+        document.getElementById('alcohol-status').textContent = 'Error';
+        document.getElementById('fire-status').textContent = 'Error';
+        document.getElementById('gas-status').textContent = 'Error';
+      }
+    }
+
+    fetchSensorData();
+    setInterval(fetchSensorData, 5000);
+  </script>
+</body>
+</html>
