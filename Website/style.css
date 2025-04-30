@@ -18,6 +18,12 @@ body {
     color: #f1c40f;
   }
   
+  .card h2 {
+    color: #f1c40f; 
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+
   nav ul {
     list-style: none;
     display: flex;
@@ -68,12 +74,12 @@ body {
     background: rgba(255, 255, 255, 0.05);
     border-left: 5px solid #f1c40f;
     padding: 30px;
-    flex: 1;
+    flex: 1 1 calc(50% - 30px); /* Make each card take up 50% minus the gap */
     min-width: 280px;
-    max-width: 500px;
+    max-width: 500px; 
     border-radius: 15px;
     backdrop-filter: blur(10px);
-  }
+  }  
   
   .founder-section,
   .map-section {
